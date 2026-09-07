@@ -1,0 +1,179 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 340" width="1200" height="340" role="img" aria-label="Swikar Jaiswal — network flows over time">
+  <defs>
+    <!-- paper grain -->
+    <filter id="grain" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" result="n"/>
+      <feColorMatrix in="n" type="saturate" values="0"/>
+      <feComponentTransfer result="g"><feFuncA type="linear" slope="0.055"/></feComponentTransfer>
+      <feComposite in="g" in2="SourceGraphic" operator="over"/>
+    </filter>
+
+    <!-- hand-drawn wobble -->
+    <filter id="rough">
+      <feTurbulence type="fractalNoise" baseFrequency="0.018" numOctaves="3" seed="7" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.9" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="roughsoft">
+      <feTurbulence type="fractalNoise" baseFrequency="0.025" numOctaves="2" seed="3" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.1" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+
+    <marker id="tipInk" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9" fill="none" stroke="#1C2B3A" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="tipBrick" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9" fill="none" stroke="#B23A2E" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <marker id="tipFaint" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9" fill="none" stroke="#5C5546" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" opacity="0.55"/>
+    </marker>
+
+    <!-- flow lanes between junction J and sink T -->
+    <path id="laneOut" d="M 988,154 L 1104,154"/>
+    <path id="laneBack" d="M 1104,178 L 988,178"/>
+    <path id="laneFlip" d="M 988,178 L 1104,178"/>
+    <path id="feedA" d="M 690,112 C 750,104 790,100 828,96"/>
+    <path id="feedB" d="M 690,232 C 750,240 790,244 828,248"/>
+    <path id="midA"  d="M 856,104 C 900,120 940,140 966,156"/>
+    <path id="midB"  d="M 856,240 C 900,222 940,196 966,174"/>
+  </defs>
+
+  <!-- ============ PAPER ============ -->
+  <g filter="url(#grain)">
+    <rect width="1200" height="340" fill="#FFFDF6"/>
+    <!-- notebook grid -->
+    <g stroke="#1C2B3A" stroke-width="0.5" opacity="0.07">
+      <path d="M0 40H1200M0 80H1200M0 120H1200M0 160H1200M0 200H1200M0 240H1200M0 280H1200"/>
+      <path d="M40 0V340M80 0V340M120 0V340M160 0V340M200 0V340M240 0V340M280 0V340M320 0V340M360 0V340M400 0V340M440 0V340M480 0V340M520 0V340M560 0V340M600 0V340M640 0V340M680 0V340M720 0V340M760 0V340M800 0V340M840 0V340M880 0V340M920 0V340M960 0V340M1000 0V340M1040 0V340M1080 0V340M1120 0V340M1160 0V340"/>
+    </g>
+    <!-- margin rule -->
+    <path d="M96 0V340" stroke="#B23A2E" stroke-width="1.1" opacity="0.22"/>
+  </g>
+
+  <!-- ============ WASHI TAPE ============ -->
+  <g opacity="0.9">
+    <rect x="52" y="-16" width="132" height="34" fill="#FBECC4" transform="rotate(-6 118 1)" opacity="0.95"/>
+    <rect x="52" y="-16" width="132" height="34" fill="none" stroke="#F2CB61" stroke-width="1" transform="rotate(-6 118 1)" opacity="0.7"/>
+    <rect x="1010" y="300" width="150" height="32" fill="#FBECC4" transform="rotate(4 1085 316)" opacity="0.85"/>
+  </g>
+
+  <!-- ============ NAME BLOCK ============ -->
+  <g font-family="Georgia, 'Iowan Old Style', 'Palatino Linotype', serif">
+    <text x="130" y="118" font-size="52" fill="#1C2B3A" letter-spacing="1.5">Swikar Jaiswal</text>
+    <path d="M132,134 C 240,128 360,131 470,127" stroke="#B23A2E" stroke-width="2.6" fill="none"
+          stroke-linecap="round" filter="url(#rough)" opacity="0.85"/>
+
+    <text x="132" y="176" font-size="19" fill="#5C5546" letter-spacing="0.4">Network flows over time. Evacuation routing</text>
+    <text x="132" y="204" font-size="19" fill="#5C5546" letter-spacing="0.4">under operational constraints.</text>
+
+    <text x="132" y="252" font-size="15.5" fill="#2554A6" letter-spacing="0.3" font-style="italic">Computational Mathematics, Kathmandu University</text>
+
+    <!-- small doodle: three nodes, borrowed from the site vocabulary -->
+    <g transform="translate(132,272)" stroke="#1C2B3A" fill="none" opacity="0.5" filter="url(#roughsoft)">
+      <circle cx="8" cy="14" r="5" stroke-width="1.4"/>
+      <circle cx="42" cy="6" r="5" stroke-width="1.4"/>
+      <circle cx="76" cy="18" r="5" stroke-width="1.4"/>
+      <path d="M13,12 L37,7 M47,8 L71,16" stroke-width="1.2"/>
+      <path d="M13,16 C 30,26 56,26 71,20" stroke-width="1" stroke-dasharray="3 3"/>
+    </g>
+  </g>
+
+  <!-- ============ THE NETWORK ============ -->
+  <g filter="url(#roughsoft)">
+    <!-- feed edges -->
+    <use href="#feedA" fill="none" stroke="#1C2B3A" stroke-width="1.7" opacity="0.6" marker-end="url(#tipInk)"/>
+    <use href="#feedB" fill="none" stroke="#1C2B3A" stroke-width="1.7" opacity="0.6" marker-end="url(#tipInk)"/>
+    <use href="#midA"  fill="none" stroke="#1C2B3A" stroke-width="1.7" opacity="0.6" marker-end="url(#tipInk)"/>
+    <use href="#midB"  fill="none" stroke="#1C2B3A" stroke-width="1.7" opacity="0.6" marker-end="url(#tipInk)"/>
+
+    <!-- outbound lane: always flowing -->
+    <use href="#laneOut" fill="none" stroke="#1C2B3A" stroke-width="2.2" marker-end="url(#tipInk)"/>
+
+    <!-- opposing lane: idle inbound, then reversed -->
+    <g>
+      <use href="#laneBack" fill="none" stroke="#5C5546" stroke-width="1.8" stroke-dasharray="5 4" marker-end="url(#tipFaint)">
+        <animate attributeName="opacity" values="0.6;0.6;0;0" keyTimes="0;0.36;0.44;1" dur="9s" repeatCount="indefinite"/>
+      </use>
+      <use href="#laneFlip" fill="none" stroke="#B23A2E" stroke-width="2.4" marker-end="url(#tipBrick)" opacity="0">
+        <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.44;0.52;1" dur="9s" repeatCount="indefinite"/>
+      </use>
+    </g>
+  </g>
+
+  <!-- nodes -->
+  <g filter="url(#roughsoft)">
+    <g fill="#FFFDF6" stroke="#1C2B3A" stroke-width="2">
+      <circle cx="676" cy="114" r="14"/>
+      <circle cx="676" cy="230" r="14"/>
+      <circle cx="842" cy="94" r="12"/>
+      <circle cx="842" cy="250" r="12"/>
+      <circle cx="978" cy="166" r="13"/>
+    </g>
+    <circle cx="1114" cy="166" r="17" fill="#FBECC4" stroke="#B23A2E" stroke-width="2.4"/>
+    <path d="M1107,166 L1112,172 L1122,160" fill="none" stroke="#B23A2E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <g font-family="Georgia, serif" font-size="12.5" fill="#5C5546">
+    <text x="646" y="92" text-anchor="middle">zone</text>
+    <text x="646" y="262" text-anchor="middle">zone</text>
+    <text x="1114" y="204" text-anchor="middle" fill="#B23A2E">shelter</text>
+  </g>
+
+  <!-- annotation -->
+  <g opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1;0" keyTimes="0;0.46;0.56;0.92;1" dur="9s" repeatCount="indefinite"/>
+    <text x="1046" y="228" font-family="Georgia, serif" font-size="14.5" font-style="italic" fill="#B23A2E" text-anchor="middle">lane reversed</text>
+    <path d="M1046,216 C 1042,206 1040,198 1042,190" stroke="#B23A2E" stroke-width="1.5" fill="none"
+          stroke-linecap="round" marker-end="url(#tipBrick)" filter="url(#rough)"/>
+  </g>
+
+  <!-- ============ FLOW PARTICLES ============ -->
+  <!-- steady outbound -->
+  <g fill="#1C2B3A">
+    <circle r="4"><animateMotion dur="1.5s" repeatCount="indefinite"><mpath href="#laneOut"/></animateMotion></circle>
+    <circle r="4"><animateMotion dur="1.5s" begin="0.5s" repeatCount="indefinite"><mpath href="#laneOut"/></animateMotion></circle>
+    <circle r="4"><animateMotion dur="1.5s" begin="1s" repeatCount="indefinite"><mpath href="#laneOut"/></animateMotion></circle>
+  </g>
+
+  <!-- feeders -->
+  <g fill="#1C2B3A" opacity="0.75">
+    <circle r="3.4"><animateMotion dur="2.6s" repeatCount="indefinite"><mpath href="#feedA"/></animateMotion></circle>
+    <circle r="3.4"><animateMotion dur="2.6s" begin="1.3s" repeatCount="indefinite"><mpath href="#feedA"/></animateMotion></circle>
+    <circle r="3.4"><animateMotion dur="2.6s" begin="0.65s" repeatCount="indefinite"><mpath href="#feedB"/></animateMotion></circle>
+    <circle r="3.4"><animateMotion dur="2.6s" begin="1.95s" repeatCount="indefinite"><mpath href="#feedB"/></animateMotion></circle>
+    <circle r="3.4"><animateMotion dur="2.2s" repeatCount="indefinite"><mpath href="#midA"/></animateMotion></circle>
+    <circle r="3.4"><animateMotion dur="2.2s" begin="1.1s" repeatCount="indefinite"><mpath href="#midA"/></animateMotion></circle>
+    <circle r="3.4"><animateMotion dur="2.2s" begin="0.55s" repeatCount="indefinite"><mpath href="#midB"/></animateMotion></circle>
+    <circle r="3.4"><animateMotion dur="2.2s" begin="1.65s" repeatCount="indefinite"><mpath href="#midB"/></animateMotion></circle>
+  </g>
+
+  <!-- idle inbound trickle, disappears at reversal -->
+  <g fill="#5C5546" opacity="0.5">
+    <animate attributeName="opacity" values="0.5;0.5;0;0" keyTimes="0;0.36;0.44;1" dur="9s" repeatCount="indefinite"/>
+    <circle r="3"><animateMotion dur="3.4s" repeatCount="indefinite"><mpath href="#laneBack"/></animateMotion></circle>
+  </g>
+
+  <!-- reversed lane runs hot -->
+  <g fill="#B23A2E" opacity="0">
+    <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.46;0.54;1" dur="9s" repeatCount="indefinite"/>
+    <circle r="4.2"><animateMotion dur="1.3s" repeatCount="indefinite"><mpath href="#laneFlip"/></animateMotion></circle>
+    <circle r="4.2"><animateMotion dur="1.3s" begin="0.43s" repeatCount="indefinite"><mpath href="#laneFlip"/></animateMotion></circle>
+    <circle r="4.2"><animateMotion dur="1.3s" begin="0.86s" repeatCount="indefinite"><mpath href="#laneFlip"/></animateMotion></circle>
+  </g>
+
+  <!-- clearance-time readout -->
+  <g font-family="Georgia, serif" font-size="15" fill="#1C2B3A">
+    <text x="676" y="304" opacity="0.75">clearance time</text>
+    <text x="812" y="304" font-size="19" fill="#1C2B3A">
+      <tspan>32</tspan>
+      <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;0.46;0.54;1" dur="9s" repeatCount="indefinite"/>
+    </text>
+    <text x="812" y="304" font-size="19" fill="#B23A2E" opacity="0">
+      <tspan>22</tspan>
+      <animate attributeName="opacity" values="0;0;1;1" keyTimes="0;0.5;0.58;1" dur="9s" repeatCount="indefinite"/>
+    </text>
+  </g>
+
+  <!-- ============ TORN BOTTOM EDGE ============ -->
+  <path d="M0,340 L0,318 L26,326 L52,314 L78,330 L104,316 L130,334 L156,314 L182,328 L208,312 L234,326 L260,334 L286,316 L312,330 L338,314 L364,328 L390,312 L416,330 L442,316 L468,332 L494,314 L520,328 L546,310 L572,326 L598,334 L624,316 L650,330 L676,314 L702,326 L728,310 L754,328 L780,318 L806,334 L832,314 L858,328 L884,312 L910,326 L936,316 L962,332 L988,314 L1014,328 L1040,312 L1066,326 L1092,334 L1118,316 L1144,330 L1170,314 L1200,322 L1200,340 Z" fill="#F7F4EA"/>
+</svg>

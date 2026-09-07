@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 330" width="760" height="330" role="img" aria-label="Budget versus clearance time frontier, Kathmandu case study">
+  <defs>
+    <filter id="g2" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.8" numOctaves="4" result="n"/>
+      <feColorMatrix in="n" type="saturate" values="0"/>
+      <feComponentTransfer result="s"><feFuncA type="linear" slope="0.05"/></feComponentTransfer>
+      <feComposite in="s" in2="SourceGraphic" operator="over"/>
+    </filter>
+    <filter id="r2">
+      <feTurbulence type="fractalNoise" baseFrequency="0.022" numOctaves="2" seed="11" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="1.5" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <marker id="ar" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M0,1 L9,5 L0,9" fill="none" stroke="#1C2B3A" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+  </defs>
+
+  <!-- paper card -->
+  <g filter="url(#g2)">
+    <rect x="6" y="6" width="748" height="318" rx="3" fill="#FFFDF6" stroke="#E0DACF" stroke-width="1.5"/>
+    <g stroke="#1C2B3A" stroke-width="0.5" opacity="0.06">
+      <path d="M6 46H754M6 86H754M6 126H754M6 166H754M6 206H754M6 246H754M6 286H754"/>
+      <path d="M46 6V324M86 6V324M126 6V324M166 6V324M206 6V324M246 6V324M286 6V324M326 6V324M366 6V324M406 6V324M446 6V324M486 6V324M526 6V324M566 6V324M606 6V324M646 6V324M686 6V324M726 6V324"/>
+    </g>
+  </g>
+
+  <!-- washi tab -->
+  <rect x="546" y="-8" width="118" height="28" fill="#FBECC4" transform="rotate(3 605 6)" opacity="0.9"/>
+
+  <g font-family="Georgia, 'Palatino Linotype', serif">
+    <text x="34" y="44" font-size="17" fill="#1C2B3A">What a reversal budget actually buys</text>
+    <text x="34" y="64" font-size="12.5" fill="#5C5546" font-style="italic">central Kathmandu, 25 nodes, 115 arcs, 540 evacuees</text>
+  </g>
+
+  <!-- axes -->
+  <g filter="url(#r2)" stroke="#1C2B3A" stroke-width="1.6" fill="none" stroke-linecap="round">
+    <path d="M96,268 L700,268" marker-end="url(#ar)"/>
+    <path d="M96,268 L96,92" marker-end="url(#ar)"/>
+  </g>
+
+  <g font-family="Georgia, serif" font-size="12" fill="#5C5546">
+    <text x="398" y="296" text-anchor="middle">reversal budget</text>
+    <text x="52" y="180" text-anchor="middle" transform="rotate(-90 52 180)">clearance time</text>
+  </g>
+
+  <!-- y ticks -->
+  <g font-family="Georgia, serif" font-size="11.5" fill="#5C5546" text-anchor="end">
+    <text x="88" y="116">32</text>
+    <text x="88" y="176">28</text>
+    <text x="88" y="236">24</text>
+    <text x="88" y="266">22</text>
+  </g>
+  <!-- x ticks -->
+  <g font-family="Georgia, serif" font-size="11.5" fill="#5C5546" text-anchor="middle">
+    <text x="96" y="286">0</text>
+    <text x="286" y="286">500</text>
+    <text x="422" y="286">859</text>
+    <text x="548" y="286">1190</text>
+  </g>
+
+  <!-- staircase frontier: (0,32) (500,25) (859,23) (1190,22) -->
+  <g filter="url(#r2)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M96,112 L286,112 L286,217 L422,217 L422,247 L548,247 L548,262 L688,262"
+          stroke="#2554A6" stroke-width="2.8" opacity="0.9">
+      <animate attributeName="stroke-dasharray" values="0 1400;1400 0" dur="2.4s" fill="freeze"/>
+    </path>
+  </g>
+
+  <!-- points -->
+  <g>
+    <circle cx="96" cy="112" r="5.5" fill="#FFFDF6" stroke="#1C2B3A" stroke-width="2"/>
+    <circle cx="286" cy="217" r="5.5" fill="#FFFDF6" stroke="#1C2B3A" stroke-width="2"/>
+    <circle cx="422" cy="247" r="5.5" fill="#FFFDF6" stroke="#1C2B3A" stroke-width="2"/>
+    <circle cx="548" cy="262" r="6.5" fill="#FBECC4" stroke="#B23A2E" stroke-width="2.4"/>
+  </g>
+
+  <!-- annotations -->
+  <g font-family="Georgia, serif" font-size="12" fill="#1C2B3A">
+    <text x="112" y="102">no reversals: 32</text>
+    <text x="300" y="208">500 buys 7 units</text>
+    <text x="562" y="252" fill="#B23A2E">floor: 22</text>
+  </g>
+
+  <!-- diminishing returns callout -->
+  <g filter="url(#r2)">
+    <path d="M470,180 C 505,196 528,222 542,244" stroke="#B23A2E" stroke-width="1.4" fill="none"
+          stroke-linecap="round" marker-end="url(#ar)" opacity="0.75"/>
+  </g>
+  <g font-family="Georgia, serif" font-size="12.5" font-style="italic" fill="#B23A2E">
+    <text x="470" y="172" text-anchor="middle">doubling the budget here</text>
+    <text x="470" y="188" text-anchor="middle">saves two units</text>
+  </g>
+
+  <!-- footnote -->
+  <text x="34" y="312" font-family="Georgia, serif" font-size="11.5" fill="#5C5546" font-style="italic">
+    The curve makes the tradeoff legible. Whether it is worth paying is left to the planner.
+  </text>
+</svg>
