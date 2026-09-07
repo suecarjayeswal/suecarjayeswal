@@ -4,110 +4,171 @@
   <img alt="Swikar Jaiswal — network flows over time" src="https://raw.githubusercontent.com/suecarjayeswal/suecarjayeswal/main/assets/banner-light.svg">
 </picture>
 
-I started by building things. A campus network-strength heatmap that meant modifying an APK
-in Android Studio so it would log every WiFi reading, geotagged off multiple satellites. A
-puzzle game in C++ where the hard part turned out to be writing gravity for tubes falling
-into columns. An execution engine, a sampler, a genetic algorithm hunting good parameters.
+I started by building things with my hands. Modifying an Android APK in Android Studio so it would log raw WiFi telemetry across campus, synchronized with multi-satellite GPS geotags. Writing a native desktop puzzle game in C++ where the stubborn challenge was coding believable gravity for tubes dropping into columns alongside a custom undo/redo state stack. Spending nine months rebuilding an automated execution engine in Rust from scratch to learn what sub-millisecond throughput demands from OS scheduling, lock-free ring buffers, and CPU cache-line alignment. Designing Bayesian MCMC samplers over heavy-tailed market volume distributions, and evolving non-standard trading indicator parameters via genetic algorithms across an 11-year backtest.
 
-Somewhere after second year I started looking underneath the code, at the theory and the
-algorithmic concepts governing what I had been writing, and began producing expositions to
-get the machinery to a point where I could change it rather than only cite it. Reading
-widely mattered more than I expected here. Economics, philosophy, design, physics, and
-environment each left something behind in how I read a theorem.
+Somewhere after second year, I began looking underneath the code at the mathematical machinery governing what I had been writing. I started producing expositions—pulling theorems, discrete geometries, and algebraic structures apart until I could **modify** the machinery rather than merely cite it. Reading widely mattered immensely here: economics, philosophy, design, physics, and ecology each gave a concrete, spatial intuition to how I read a proof.
 
-The computational side never left. Being able to think in both is the thing that actually
-moves me, and it is why I can sprint at a problem for a year without getting bored of it.
+The computational foundation never left. Being able to think in both abstract mathematics and bare-metal systems is what moves me, and it is why I can sprint at a problem for a year without losing momentum.
 
-What I want next is artificial reasoning and modeling: trade algorithms, artificial
-creativity, economic modeling, anything with that shape. I have yet to meet a problem I
-could not make interesting by looking at it long enough.
+Today, my core focus is **Artificial Reasoning and Mathematical Modeling**—whether in trade algorithms, artificial creativity, non-equilibrium economic systems, or autonomous topological memory architectures. I have yet to meet a problem I could not make deeply interesting by looking at it long enough.
 
-**[Multi-facility allocation in network flow models: a case study](https://doi.org/10.70530/kuset.v20i1.721)** ·
-*KUSET* 20(1), 2026 · two further papers under review ·
-writing at **[swikarjaiswal.com.np](https://swikarjaiswal.com.np)**
+**[Multi-facility allocation in network flow models: a case study](https://doi.org/10.70530/kuset.v20i1.721)** · *KUSET* 20(1), 2026 · two further articles under review · writing at **[swikarjaiswal.com.np](https://swikarjaiswal.com.np)**
 
 ---
 
 ### How the work connects
 
 ```mermaid
-%%{init: {'theme':'base','themeVariables':{'primaryColor':'#FBECC4','primaryTextColor':'#1C2B3A','primaryBorderColor':'#B23A2E','lineColor':'#5C5546','secondaryColor':'#EFE9D8','tertiaryColor':'#FFFDF6','fontFamily':'Georgia, serif','fontSize':'14px'}}}%%
+%%{init: {'theme':'base','themeVariables':{'primaryColor':'#FBECC4','primaryTextColor':'#1C2B3A','primaryBorderColor':'#B23A2E','lineColor':'#5C5546','secondaryColor':'#EFE9D8','tertiaryColor':'#FFFDF6','fontFamily':'Georgia, serif','fontSize':'13px'}}}%%
 flowchart TD
-  C(["<b>Computational</b>"])
-  T(["<b>Theory</b>"])
-  O(["<b>Optimization &<br/>Operations Research</b>"])
+  subgraph LENSES ["<b>Cross-Disciplinary Foundations</b>"]
+    E["<b>Economics & Finance</b><br/><i>market microstructure · incentives</i>"]
+    P["<b>Philosophy & Cognition</b><br/><i>hallucination · stopping criteria</i>"]
+    S["<b>Systems & OS Internals</b><br/><i>lock-free buffers · cache alignment</i>"]
+    Y["<b>Physics & Earth Observation</b><br/><i>Sentinel-1 SAR · dynamical systems</i>"]
+  end
 
-  C --> C1["campus signal heatmap<br/><i>APK instrumentation</i>"]
-  C --> C2["tube puzzle<br/><i>gravity in C++</i>"]
-  C --> C3["execution engine<br/><i>Rust</i>"]
-  C --> C4["MCMC · evolutionary search"]
+  subgraph THEORY ["<b>Theoretical Machinery & Expositions</b>"]
+    T1["<b>Network Flows over Time</b><br/><i>transshipment · contraflow tractability</i>"]
+    T2["<b>Discrete Geometry & Graphs</b><br/><i>recourse hyperplanes · Mantegna MST</i>"]
+    T3["<b>Stochastic Inference</b><br/><i>PyMC NUTS · heavy-tailed priors</i>"]
+    T4["<b>Algebraic Structures</b><br/><i>GF(2^8) AES · elliptic curve group law</i>"]
+  end
 
-  T --> T1["expositions<br/><i>chain decomposition,<br/>submodularity</i>"]
-  T --> T2["cryptography<br/><i>from definitions</i>"]
-  T --> T3["how models fail<br/><i>compression argument</i>"]
+  subgraph ENGINES ["<b>Computational Engines & Systems</b>"]
+    C1["<b>Margadarshan</b><br/><i>offline Gemma 4 · confidence graphs</i>"]
+    C2["<b>Rust Trading Engine</b><br/><i>sub-ms order book · lock-free SPSC</i>"]
+    C3["<b>Slime Mould + SAR</b><br/><i>ESA SNAP GPF · Otsu flood masks</i>"]
+    C4["<b>PyMC Anomaly & GA</b><br/><i>R̂=1.00 · parameter evolution (+44.1%)</i>"]
+    C5["<b>Telemetry & Native DSA</b><br/><i>APK WiFi/GPS · C++ gravity physics</i>"]
+  end
 
-  O --> O1["contraflow<br/>tractability"]
-  O --> O2["facility location<br/>in flow networks"]
+  subgraph FRONTIER ["<b>The Frontier: Reasoning & Modeling</b>"]
+    R1["<b>Artificial Reasoning & Memory</b><br/><i>topological context · self-limiting loops</i>"]
+    R2["<b>Frontier Market & Trade Modeling</b><br/><i>non-equilibrium dynamics · execution</i>"]
+    R3["<b>Artificial Creativity</b><br/><i>low-amplitude search + sharp evaluators</i>"]
+  end
 
-  T1 -.-> O1
-  C4 -.-> O1
-  C3 -.-> MG(["margadarshan"])
-  T3 -.-> MG
+  %% Interdisciplinary to Theory & Systems
+  E --> T1
+  E --> T2
+  P --> R1
+  P --> R3
+  S --> T4
+  S --> C2
+  Y --> T1
+  Y --> C3
 
-  O1 --> P1{{"where contraflow<br/>gets hard"}}
-  O2 --> P2{{"KUSET 2026"}}
+  %% Theory to Engines & Frontier
+  T1 --> C1
+  T1 --> C3
+  T2 --> C4
+  T3 --> C4
+  T4 --> C5
 
-  style C fill:#FBECC4,stroke:#B23A2E,stroke-width:2px
-  style T fill:#FBECC4,stroke:#B23A2E,stroke-width:2px
-  style O fill:#FBECC4,stroke:#B23A2E,stroke-width:2px
-  style P1 fill:#EFE9D8,stroke:#2554A6,stroke-width:2px
-  style P2 fill:#EFE9D8,stroke:#2554A6,stroke-width:2px
-  style MG fill:#FFFDF6,stroke:#B23A2E,stroke-width:2px
+  %% Engines to Frontier
+  C1 -.-> R1
+  C2 -.-> R2
+  C3 -.-> R2
+  C4 -.-> R2
+  C1 -.-> R3
+
+  style LENSES fill:#FFFDF6,stroke:#B23A2E,stroke-width:1.5px,stroke-dasharray: 3 3
+  style THEORY fill:#FFFDF6,stroke:#2554A6,stroke-width:1.5px,stroke-dasharray: 3 3
+  style ENGINES fill:#FFFDF6,stroke:#B23A2E,stroke-width:1.5px,stroke-dasharray: 3 3
+  style FRONTIER fill:#FFFDF6,stroke:#2554A6,stroke-width:1.5px,stroke-dasharray: 3 3
+
+  style E fill:#FBECC4,stroke:#B23A2E,stroke-width:1.5px
+  style P fill:#FBECC4,stroke:#B23A2E,stroke-width:1.5px
+  style S fill:#FBECC4,stroke:#B23A2E,stroke-width:1.5px
+  style Y fill:#FBECC4,stroke:#B23A2E,stroke-width:1.5px
+
+  style T1 fill:#EFE9D8,stroke:#2554A6,stroke-width:1.5px
+  style T2 fill:#EFE9D8,stroke:#2554A6,stroke-width:1.5px
+  style T3 fill:#EFE9D8,stroke:#2554A6,stroke-width:1.5px
+  style T4 fill:#EFE9D8,stroke:#2554A6,stroke-width:1.5px
+
+  style C1 fill:#FFFDF6,stroke:#B23A2E,stroke-width:1.5px
+  style C2 fill:#FFFDF6,stroke:#B23A2E,stroke-width:1.5px
+  style C3 fill:#FFFDF6,stroke:#B23A2E,stroke-width:1.5px
+  style C4 fill:#FFFDF6,stroke:#B23A2E,stroke-width:1.5px
+  style C5 fill:#FFFDF6,stroke:#B23A2E,stroke-width:1.5px
+
+  style R1 fill:#FBECC4,stroke:#2554A6,stroke-width:2px
+  style R2 fill:#FBECC4,stroke:#2554A6,stroke-width:2px
+  style R3 fill:#FBECC4,stroke:#2554A6,stroke-width:2px
 ```
 
-The dotted edges are the ones I care about. Expositions written for their own sake turned
-out to be what the tractability proof needed, and `margadarshan` only works because
-unreliable claims about the world have to be weighted before they can become edge weights.
+The dotted edges represent direct cross-domain transfers:
+- **Margadarshan** transforms unstructured police text into topological edge penalties via $W_e = W_{\text{base}} / \max(C, 0.01)$, evaluated through an exact McNemar test ($p = 0.0078$).
+- **Slime Mould Routing** integrates real European Space Agency (ESA) Sentinel-1 SAR satellite data—calibrating and thresholding backscatter to form dynamic flood inundation barriers across biological transport networks.
+- **Contraflow Optimization (BQTC)** originated when an overnight traffic ban in Kathmandu's historic Asan market demonstrated how human greedy rerouting breaks static flow models.
 
 ---
 
 ### One result, plotted
 
-Reversing an inbound lane adds outbound capacity, which is how you empty a city faster. It
-is also expensive, so the real question is what a given budget buys.
+Reversing an inbound lane adds outbound capacity, which is how you evacuate a congested corridor faster. Because directional reversals require physical resources (traffic police, barriers, signage), the central question is what a given budget buys.
 
 <img alt="budget versus clearance time frontier" src="https://raw.githubusercontent.com/suecarjayeswal/suecarjayeswal/main/assets/frontier.svg" width="100%">
 
-The steep part is free money. The flat part is where operations research hands the problem
-back to a human being.
+The steep initial descent reflects high-leverage bottlenecks where modest budget buys rapid evacuation gains. The flat tail is the Pareto frontier where operations research hands the decision back to human policy.
 
 ---
 
-### Repositories
+### Selected Systems, Algorithms & Experiments
 
-| | what it is |
-|---|---|
-| **[margadarshan](https://github.com/suecarjayeswal/margadarshan)** | Routing around road disruptions. A locally-run language model pulls closures out of Nepali police bulletins; each claim is scored by source reliability, corroboration, and age, and those scores become edge weights. `Python` `NetworkX` `Ollama` |
-| **[silent-witness](https://github.com/suecarjayeswal/2024-ecothon-ecoequation)** | Behavioural graphs layered over object detection, tracking recurring patterns rather than identities. Most Innovative Project, Watson Code Fest 2024. `Python` |
-| **[filtermyfeed](https://github.com/suecarjayeswal/FiltermyFeed)** | Browser extension filtering triggering content with a self-trained classifier. The hard part was figurative language: *your eyes kill me* is not a threat. `Python` `distilBERT` |
-| **[tube-puzzle](https://github.com/suecarjayeswal/Tube_Puzzle)** | Native C++ puzzle game with a custom undo stack. Writing believable gravity for tubes dropping into columns took longer than the game did. `C++` `wxWidgets` |
-| **[nepalensis](https://github.com/suecarjayeswal/nepalensis)** | Visualizing Nepal's entries in the BOLD biodiversity database. Runner-Up, Watson Crack the Code 2022. `CSS` `Python` |
+| Project | Domain / Stack | What was built & discovered |
+|---|---|---|
+| **[margadarshan](https://github.com/suecarjayeswal/margadarshan)** | `Python` `NetworkX` `Gemma 4` `Ollama` | **Offline road disruption intelligence.** Parses unstructured Nepali police bulletins locally via Gemma 4 (31B) into structured incident JSON. Computes multi-factor edge confidence ($C = \text{Source} \times \text{Corroboration} \times \text{Decay}$) and applies inverse confidence routing penalties. Validated via exact McNemar test ($p = 0.0078$). |
+| **[automated-trading-system](https://github.com/suecarjayeswal)** | `Rust` `Lock-Free Ring Buffers` `Async` | **Sub-millisecond execution engine.** 9-month ground-up rebuild. Implements lock-free SPSC order queues, cache-line-aligned hot data structures, and deterministic zero-allocation execution paths to eliminate GC pauses and minimize OS scheduling latency. |
+| **[slime-mould-sar](https://github.com/suecarjayeswal)** | `Python` `ESA SNAP GPF` `snappy` `QGIS` | **Bio-inspired disaster routing on satellite telemetry.** Combines *Physarum polycephalum* adaptive foraging heuristics with an automated ESA Sentinel-1 SAR pipeline (radiometric calibration, terrain correction, Otsu thresholding) to route around live flood inundation zones. |
+| **[mcmc-anomaly-detection](https://github.com/suecarjayeswal)** | `Python` `PyMC` `ArviZ` | **Bayesian volume anomaly detection.** Log-normal likelihood model ($V \sim \text{Lognormal}(\mu, \sigma)$) sampled with No-U-Turn Sampler (NUTS) across 4 chains (2,000 draws). Verified convergence with $\hat{R} = 1.00$, $\text{ESS}_\text{bulk} > 7{,}900$, isolating statistically grounded institutional block trades. |
+| **[ga-technical-indicators](https://github.com/suecarjayeswal)** | `Python` `NumPy` `LaTeX` | **Meta-heuristic parameter optimization.** Genetic Algorithm optimizing continuous parameter spaces on 11-year NEPSE data (2,522 sessions). Converged to non-standard MACD $(41, 83, 6)$ vs. textbook $(12, 26, 9)$, yielding **+44.1% net profit** while halving execution friction. |
+| **[portfolio-risk-graph](https://github.com/suecarjayeswal)** | `Python` `NetworkX` `Dash` `Plotly` | **Topological market geometry.** Maps 130 securities using Mantegna ultrametric distance $d_{ij} = \sqrt{2(1-\rho_{ij})}$. Filters 8,385 correlations down to 129 MST edges; identifies systemic risk nodes and optimal diversification complements via Minimum Weighted Vertex Covers. |
+| **[silent-witness](https://github.com/suecarjayeswal/2024-ecothon-ecoequation)** | `Python` `Graph Theory` `YOLO` | **Graph-based behavioral anomaly detection.** Layers spatial interaction graphs over multi-agent object detections to track recurring abusive patterns rather than individual identities. *Special Prize, BioHackathon 2024.* |
+| **[filtermyfeed](https://github.com/suecarjayeswal/FiltermyFeed)** | `Python` `distilBERT` `Chrome Extension` | **Context-aware content filtering.** Self-trained NLP classifier distinguishing figurative language from actual threats (*"your eyes kill me"* vs. real harassment). *Winner, Hackest 2023.* |
+| **[tube-puzzle](https://github.com/suecarjayeswal/Tube_Puzzle)** | `C++` `wxWidgets` `DSA` | **Native desktop puzzle game.** Custom gravity physics simulation for falling tube fluids into discrete columns, featuring a memory-efficient stack-based undo/redo state machine. |
+| **[wifi-signal-heatmap](https://github.com/suecarjayeswal)** | `Android Studio` `Python` `Folium` | **Spatial RF telemetry & multi-satellite geotagging.** Modified an Android APK to log raw WiFi RSSI metrics synchronized with multi-constellation satellite GPS, interpolating campus-wide spatial RF heatmaps in Leaflet.js. |
+
+<details>
+<summary><b>View first-principles coursework & mathematical implementations</b></summary>
+
+<br/>
+
+- **MATH 402 Cryptography & Quantum Protocols:** AES-128 from scratch with finite field $\text{GF}(2^8)$ multiplication; Weierstrass Elliptic Curve group law visualizer; full Quantum Key Distribution (BB84 protocol) simulation with Bloch sphere state vectors and eavesdropper QBER detection.
+- **Operating Systems Architecture:** Multi-policy CPU scheduler (FCFS, SJF, SRTF, Priority, Round Robin) with Gantt telemetry; virtual memory page replacement simulator demonstrating Belady's Anomaly.
+- **Galois Field $\text{GF}(2)$ CRC & Error Injection:** Polynomial division bit-level simulator benchmarking syndrome detection rates across multi-bit burst corruption models.
+- **Bare-Metal C Systems:** Custom Binary Search Tree pointer benchmarks against CPU clocks; Gaussian elimination linear system solvers from scratch.
+
+</details>
 
 ---
 
-### How I work
+### Expositions & How I Think
 
-Find the structural fault first, then rebuild from it. In practice:
+I write expositions to deconstruct complex machinery until the geometry becomes intuitive:
 
-- Write the machinery out expositorily until I can **modify** it, not merely cite it.
-- Construct the smallest instance that could break the conjecture, then actually build it.
-- Keep the counterexamples. Most conjectures die; the survivors become theorems.
-- Report the baseline beside the result, and say what the model does not cover.
+- **[The Recourse Hyperplane in Submodularity](https://swikarjaiswal.com.np/explorations/submodularity-geometry):** Why submodularity ($f(A \cup B) + f(A \cap B) \le f(A) + f(B)$) is not merely a discrete set inequality, but a question of vector cone projections against the active constraint manifold of dual linear programs.
+- **[When Physical Reality Breaks Flow Models](https://swikarjaiswal.com.np/explorations/asan-network-flow):** Simulating how vehicle bans in Kathmandu's historic Asan market cause localized queue collapses, and why dynamic contraflow (BQTC) requires algorithmic lane reversals under tight budgets.
+- **[Hallucination as Key to Creativity](https://swikarjaiswal.com.np/explorations/hallucination-creativity):** Viewing creativity as rapid, low-amplitude search across high-dimensional associative spaces—where the bottleneck is not generative capacity, but sharp, topological evaluators and bounded recall criteria.
+- **[Dirichlet Bounds in Continued Fraction Compression](https://swikarjaiswal.com.np/explorations):** Probing the information border between rational approximations and data compression limits.
 
-I lost weeks of the thesis to confusing an incidence matrix with its transpose, because the
-standard presentations treat the two interchangeably and the contraflow adaptation does not
-permit that. It was the most useful mistake of the project.
+#### Core Research & Engineering Tenets
+
+1. **Find the structural fault first, then rebuild from it.** (I lost weeks of my thesis to a transposed incidence matrix $[\Gamma]$ vs $[\Gamma]^T$ because standard literature treated them loosely; tracking down that exact fault unlocked the polynomial tractability proof).
+2. **Construct the smallest instance that could break the conjecture.** Build the counterexample in code before proving the general case.
+3. **Report the baseline beside the result.** State clearly where the model breaks down, where assumptions fail, and what the data cannot cover.
 
 ---
 
-<sub>Kathmandu University · Computational Mathematics · [swikarjaiswal.com.np](https://swikarjaiswal.com.np) · [LinkedIn](https://www.linkedin.com/in/swikarjaiswal)</sub>
+<div align="center">
+  <sub>Kathmandu University · B.Sc. Computational Mathematics (Graduated 2026)</sub>
+  <br/>
+  <sub>
+    <a href="https://swikarjaiswal.com.np">Portfolio</a> &nbsp;•&nbsp;
+    <a href="https://github.com/suecarjayeswal">GitHub</a> &nbsp;•&nbsp;
+    <a href="https://www.linkedin.com/in/swikarjaiswal">LinkedIn</a> &nbsp;•&nbsp;
+    <a href="mailto:swikarjaiswal@gmail.com">Email</a>
+  </sub>
+</div>
