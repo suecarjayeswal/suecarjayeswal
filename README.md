@@ -1,16 +1,16 @@
 <picture>
   <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/suecarjayeswal/suecarjayeswal/main/assets/banner-dark.svg">
   <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/suecarjayeswal/suecarjayeswal/main/assets/banner-light.svg">
-  <img alt="Swikar Jaiswal — network flows over time" src="https://raw.githubusercontent.com/suecarjayeswal/suecarjayeswal/main/assets/banner-light.svg">
+  <img alt="Swikar Jaiswal -- network flows over time" src="https://raw.githubusercontent.com/suecarjayeswal/suecarjayeswal/main/assets/banner-light.svg">
 </picture>
 
 I started by building things with my hands. Modifying an Android APK in Android Studio so it would log raw WiFi telemetry across campus, synchronized with multi-satellite GPS geotags. Writing a native desktop puzzle game in C++ where the stubborn challenge was coding believable gravity for tubes dropping into columns alongside a custom undo/redo state stack. Spending nine months rebuilding an automated execution engine in Rust from scratch to learn what sub-millisecond throughput demands from OS scheduling, lock-free ring buffers, and CPU cache-line alignment. Designing Bayesian MCMC samplers over heavy-tailed market volume distributions, and evolving non-standard trading indicator parameters via genetic algorithms across an 11-year backtest.
 
-Somewhere after second year, I began looking underneath the code at the mathematical machinery governing what I had been writing. I started producing expositions—pulling theorems, discrete geometries, and algebraic structures apart until I could **modify** the machinery rather than merely cite it. Reading widely mattered immensely here: economics, philosophy, design, physics, and ecology each gave a concrete, spatial intuition to how I read a proof.
+Somewhere after second year, I began looking underneath the code at the mathematical machinery governing what I had been writing. I started producing expositions--pulling theorems, discrete geometries, and algebraic structures apart until I could **modify** the machinery rather than merely cite it. Reading widely mattered immensely here: economics, philosophy, design, physics, and ecology each gave a concrete, spatial intuition to how I read a proof.
 
 The computational foundation never left. Being able to think in both abstract mathematics and bare-metal systems is what moves me, and it is why I can sprint at a problem for a year without losing momentum.
 
-Today, my core focus is **Artificial Reasoning and Mathematical Modeling**—whether in trade algorithms, artificial creativity, non-equilibrium economic systems, or autonomous topological memory architectures. I have yet to meet a problem I could not make deeply interesting by looking at it long enough.
+Today, my core focus is **Artificial Reasoning and Mathematical Modeling**--whether in trade algorithms, artificial creativity, non-equilibrium economic systems, or autonomous topological memory architectures. I have yet to meet a problem I could not make deeply interesting by looking at it long enough.
 
 **[Multi-facility allocation in network flow models: a case study](https://doi.org/10.70530/kuset.v20i1.721)** · *KUSET* 20(1), 2026 · two further articles under review · writing at **[swikarjaiswal.com.np](https://swikarjaiswal.com.np)**
 
@@ -18,92 +18,13 @@ Today, my core focus is **Artificial Reasoning and Mathematical Modeling**—whe
 
 ### How the work connects
 
-```mermaid
-%%{init: {'theme':'base','themeVariables':{'primaryColor':'#FBECC4','primaryTextColor':'#1C2B3A','primaryBorderColor':'#B23A2E','lineColor':'#5C5546','secondaryColor':'#EFE9D8','tertiaryColor':'#FFFDF6','fontFamily':'Georgia, serif','fontSize':'13px'}}}%%
-flowchart TD
-  subgraph LENSES ["<b>Cross-Disciplinary Foundations</b>"]
-    E["<b>Economics & Finance</b><br/><i>market microstructure · incentives</i>"]
-    P["<b>Philosophy & Cognition</b><br/><i>hallucination · stopping criteria</i>"]
-    S["<b>Systems & OS Internals</b><br/><i>lock-free buffers · cache alignment</i>"]
-    Y["<b>Physics & Earth Observation</b><br/><i>Sentinel-1 SAR · dynamical systems</i>"]
-  end
-
-  subgraph THEORY ["<b>Theoretical Machinery & Expositions</b>"]
-    T1["<b>Network Flows over Time</b><br/><i>transshipment · contraflow tractability</i>"]
-    T2["<b>Discrete Geometry & Graphs</b><br/><i>recourse hyperplanes · Mantegna MST</i>"]
-    T3["<b>Stochastic Inference</b><br/><i>PyMC NUTS · heavy-tailed priors</i>"]
-    T4["<b>Algebraic Structures</b><br/><i>GF(2^8) AES · elliptic curve group law</i>"]
-  end
-
-  subgraph ENGINES ["<b>Computational Engines & Systems</b>"]
-    C1["<b>Margadarshan</b><br/><i>offline Gemma 4 · confidence graphs</i>"]
-    C2["<b>Rust Trading Engine</b><br/><i>sub-ms order book · lock-free SPSC</i>"]
-    C3["<b>Slime Mould + SAR</b><br/><i>ESA SNAP GPF · Otsu flood masks</i>"]
-    C4["<b>PyMC Anomaly & GA</b><br/><i>R̂=1.00 · parameter evolution (+44.1%)</i>"]
-    C5["<b>Telemetry & Native DSA</b><br/><i>APK WiFi/GPS · C++ gravity physics</i>"]
-  end
-
-  subgraph FRONTIER ["<b>The Frontier: Reasoning & Modeling</b>"]
-    R1["<b>Artificial Reasoning & Memory</b><br/><i>topological context · self-limiting loops</i>"]
-    R2["<b>Frontier Market & Trade Modeling</b><br/><i>non-equilibrium dynamics · execution</i>"]
-    R3["<b>Artificial Creativity</b><br/><i>low-amplitude search + sharp evaluators</i>"]
-  end
-
-  %% Interdisciplinary to Theory & Systems
-  E --> T1
-  E --> T2
-  P --> R1
-  P --> R3
-  S --> T4
-  S --> C2
-  Y --> T1
-  Y --> C3
-
-  %% Theory to Engines & Frontier
-  T1 --> C1
-  T1 --> C3
-  T2 --> C4
-  T3 --> C4
-  T4 --> C5
-
-  %% Engines to Frontier
-  C1 -.-> R1
-  C2 -.-> R2
-  C3 -.-> R2
-  C4 -.-> R2
-  C1 -.-> R3
-
-  style LENSES fill:#FFFDF6,stroke:#B23A2E,stroke-width:1.5px,stroke-dasharray: 3 3
-  style THEORY fill:#FFFDF6,stroke:#2554A6,stroke-width:1.5px,stroke-dasharray: 3 3
-  style ENGINES fill:#FFFDF6,stroke:#B23A2E,stroke-width:1.5px,stroke-dasharray: 3 3
-  style FRONTIER fill:#FFFDF6,stroke:#2554A6,stroke-width:1.5px,stroke-dasharray: 3 3
-
-  style E fill:#FBECC4,stroke:#B23A2E,stroke-width:1.5px
-  style P fill:#FBECC4,stroke:#B23A2E,stroke-width:1.5px
-  style S fill:#FBECC4,stroke:#B23A2E,stroke-width:1.5px
-  style Y fill:#FBECC4,stroke:#B23A2E,stroke-width:1.5px
-
-  style T1 fill:#EFE9D8,stroke:#2554A6,stroke-width:1.5px
-  style T2 fill:#EFE9D8,stroke:#2554A6,stroke-width:1.5px
-  style T3 fill:#EFE9D8,stroke:#2554A6,stroke-width:1.5px
-  style T4 fill:#EFE9D8,stroke:#2554A6,stroke-width:1.5px
-
-  style C1 fill:#FFFDF6,stroke:#B23A2E,stroke-width:1.5px
-  style C2 fill:#FFFDF6,stroke:#B23A2E,stroke-width:1.5px
-  style C3 fill:#FFFDF6,stroke:#B23A2E,stroke-width:1.5px
-  style C4 fill:#FFFDF6,stroke:#B23A2E,stroke-width:1.5px
-  style C5 fill:#FFFDF6,stroke:#B23A2E,stroke-width:1.5px
-
-  style R1 fill:#FBECC4,stroke:#2554A6,stroke-width:2px
-  style R2 fill:#FBECC4,stroke:#2554A6,stroke-width:2px
-  style R3 fill:#FBECC4,stroke:#2554A6,stroke-width:2px
-```
-
-The dotted edges represent direct cross-domain transfers:
-- **Margadarshan** transforms unstructured police text into topological edge penalties via $W_e = W_{\text{base}} / \max(C, 0.01)$, evaluated through an exact McNemar test ($p = 0.0078$).
-- **Slime Mould Routing** integrates real European Space Agency (ESA) Sentinel-1 SAR satellite data—calibrating and thresholding backscatter to form dynamic flood inundation barriers across biological transport networks.
-- **Contraflow Optimization (BQTC)** originated when an overnight traffic ban in Kathmandu's historic Asan market demonstrated how human greedy rerouting breaks static flow models.
-
+<div align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/suecarjayeswal/suecarjayeswal/main/assets/trajectory_growth_arc_dark.svg">
+    <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/suecarjayeswal/suecarjayeswal/main/assets/trajectory_growth_arc_light.svg">
+    <img alt="Swikar Jaiswal -- Intellectual Trajectory &amp; Research Growth Arc" src="https://raw.githubusercontent.com/suecarjayeswal/suecarjayeswal/main/assets/trajectory_growth_arc_dark.svg" width="100%">
+  </picture>
+</div>
 ---
 
 ### One result, plotted
@@ -112,7 +33,7 @@ Traced from the central Kathmandu evacuation network ($25$ nodes, $115$ arcs, $5
 
 <img alt="Budget versus clearance time Pareto frontier, central Kathmandu case study" src="https://raw.githubusercontent.com/suecarjayeswal/suecarjayeswal/main/assets/bqtc_frontier.png" width="100%">
 
-The curve is steep initially and flattens progressively: early budget investments buy sharp evacuation reductions, while subsequent increments yield diminishing returns. Evacuation planning sits at the intersection of operations research and planner judgment—for instance, reaching $T^* = 23$ is available at budget $859$, but saving another time interval to reach $T^* = 22$ demands budget $1190$ ($+38.5\%$ budget for a single time step). The Pareto frontier makes these operational tradeoffs legible.
+The curve is steep initially and flattens progressively: early budget investments buy sharp evacuation reductions, while subsequent increments yield diminishing returns. Evacuation planning sits at the intersection of operations research and planner judgment--for instance, reaching $T^* = 23$ is available at budget $859$, but saving another time interval to reach $T^* = 22$ demands budget $1190$ ($+38.5\%$ budget for a single time step). The Pareto frontier makes these operational tradeoffs legible.
 
 ---
 
@@ -151,7 +72,7 @@ I write expositions to deconstruct complex machinery until the geometry becomes 
 
 - **[The Recourse Hyperplane in Submodularity](https://swikarjaiswal.com.np/explorations/submodularity-geometry):** Why submodularity ($f(A \cup B) + f(A \cap B) \le f(A) + f(B)$) is not merely a discrete set inequality, but a question of vector cone projections against the active constraint manifold of dual linear programs.
 - **[When Physical Reality Breaks Flow Models](https://swikarjaiswal.com.np/explorations/asan-network-flow):** Simulating how vehicle bans in Kathmandu's historic Asan market cause localized queue collapses, and why dynamic contraflow (BQTC) requires algorithmic lane reversals under tight budgets.
-- **[Hallucination as Key to Creativity](https://swikarjaiswal.com.np/explorations/hallucination-creativity):** Viewing creativity as rapid, low-amplitude search across high-dimensional associative spaces—where the bottleneck is not generative capacity, but sharp, topological evaluators and bounded recall criteria.
+- **[Hallucination as Key to Creativity](https://swikarjaiswal.com.np/explorations/hallucination-creativity):** Viewing creativity as rapid, low-amplitude search across high-dimensional associative spaces--where the bottleneck is not generative capacity, but sharp, topological evaluators and bounded recall criteria.
 - **[Dirichlet Bounds in Continued Fraction Compression](https://swikarjaiswal.com.np/explorations):** Probing the information border between rational approximations and data compression limits.
 
 #### Core Research & Engineering Tenets
