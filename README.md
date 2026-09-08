@@ -25,6 +25,7 @@ Today, my core focus is **Artificial Reasoning and Mathematical Modeling**--whet
     <img alt="Swikar Jaiswal -- Intellectual Trajectory &amp; Research Growth Arc" src="https://raw.githubusercontent.com/suecarjayeswal/suecarjayeswal/main/assets/trajectory_growth_arc_dark.svg" width="100%">
   </picture>
 </div>
+
 ---
 
 ### One result, plotted
